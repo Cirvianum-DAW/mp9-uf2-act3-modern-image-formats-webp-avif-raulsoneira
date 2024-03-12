@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Format Experiment</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="bg-blue-500 text-white text-center p-5">
+      <h1 class="text-4xl">Image Format Experiment</h1>
+      <nav class="mt-4">
+        <div class="text-center mt-5">
+            <a href="homer.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Homer</a>
+          <a href="logotip.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Logo</a>
+          <a href="plujaEstels.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Pluja de Estels</a>
+          <a href="postaDeSol.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Posta de Sol</a>
+          <a href="transparency.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Transparencia</a>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5"
+    >
+      <div>
+        <p>Original</p>
+        <img src="images/homer.gif" alt="Original" class="w-full" />
+        <div class="image-info"></div>
+      </div>
+      <div>
+        <p>JPEG COMPRIMIT</p>
+        <img src="images/homer.jpg" alt="JPEG COMPRIMIT" class="w-full" />
+        <div class="image-info"></div>
+      </div>
+      <div>
+        <p>WebP</p>
+        <img src="images/homer.webp" alt="WebP" class="w-full" />
+        <div class="image-info"></div>
+      </div>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
