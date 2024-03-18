@@ -49,9 +49,19 @@ function displayImageInfo(url, container) {
       container.appendChild(sizeElement);
 
       // Si és una imatge comprimida (JPEG o WebP), calculem la reducció de mida
-      if (info.format === 'jpg' || info.format === 'webp' || info.format === 'avif') {
-        const originalSize = infoContainers[0].querySelector('p:nth-child(4)').textContent.split(': ')[1].slice(0, -3); // Extraiem la mida original sense el " KB"
-        const reduction = ((originalSize - sizeInKB) / originalSize * 100).toFixed(2); // Calculem la reducció de mida en percentatge
+      if (
+        info.format === "jpg" ||
+        info.format === "webp" ||
+        info.format === "avif"
+      ) {
+        const originalSize = infoContainers[0]
+          .querySelector("p:nth-child(4)")
+          .textContent.split(": ")[1]
+          .slice(0, -3); // Extraiem la mida original sense el " KB"
+        const reduction = (
+          ((originalSize - sizeInKB) / originalSize) *
+          100
+        ).toFixed(2); // Calculem la reducció de mida en percentatge
         const reductionElement = document.createElement("p");
         reductionElement.textContent = `Reducció: ${reduction}%`;
         container.appendChild(reductionElement);
